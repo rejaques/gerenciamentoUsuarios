@@ -1,0 +1,32 @@
+services:
+  cadastro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target/gerenciamento.usuarios.war:/usr/local/tomcat/webapps/gerenciamento.usuarios.war
+    environment:
+      - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+  mysql:
+    image: 'mysql:latest'
+    container_name: mysql-db-1
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DB}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASS}
+      - MYSQL_USER=${MYSQL_USER}
+    ports:
+      - "3307:3306"
+    networks:
+      - app-network
+networks:
+  app-network:
+    external: true
