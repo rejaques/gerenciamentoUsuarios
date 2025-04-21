@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuarios, Long> {
+
+    // Verifica se já existe um usuário com o login informado
+    boolean existsByLogin(String login);
 }

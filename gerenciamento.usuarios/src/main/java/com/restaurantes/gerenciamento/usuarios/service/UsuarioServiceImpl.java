@@ -20,6 +20,17 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuarios criarUsuario(CadastrarUsuarioDto dto, Endereco endereco) {
+
+        if(dto == null || dto.getLogin() == null || dto.getSenha() == null) {
+            throw new IllegalArgumentException("Dados inválidos para criação de usuário");
+        }
+
+        if(usuarioRepository.existsByLogin(dto.getLogin())) {
+            throw new IllegalArgumentException("Login já está em uso");
+        }
+
+        validarForcaSenha(dto.getSenha());
+
         Usuarios usuario = new Usuarios();
         usuario.setNome(dto.getNome());
         usuario.setLogin(dto.getLogin());
@@ -28,5 +39,11 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuario.setEndereco(endereco);
 
         return usuarioRepository.save(usuario);
+    }
+
+    private void validarForcaSenha(String senha) {
+        if(senha.length() < 8) {
+            throw new IllegalArgumentException("Senha deve ter no mínimo 8 caracteres");
+        }
     }
 }

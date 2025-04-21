@@ -6,10 +6,7 @@ import com.restaurantes.gerenciamento.usuarios.service.interfaces.FuncionarioSer
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/cadastro")
@@ -21,6 +18,7 @@ public class CadastroController {
 
     @PostMapping("/cliente")
     public ResponseEntity<String> cadastrarCliente(@RequestBody CadastrarUsuarioDto dto) {
+        System.out.println("Chamou o endpoint de cliente!");
         clienteService.criarCliente(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body("Cliente cadastrado com sucesso!");
     }
@@ -30,4 +28,6 @@ public class CadastroController {
         funcionarioService.criarFuncionario(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body("Funcionário cadastrado com sucesso!");
     }
+
+
 }
