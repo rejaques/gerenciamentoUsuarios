@@ -1,6 +1,8 @@
 package com.restaurantes.gerenciamento.usuarios.service;
 
+import com.restaurantes.gerenciamento.usuarios.dto.AlterarDadosUsuarioDto;
 import com.restaurantes.gerenciamento.usuarios.dto.CadastrarUsuarioDto;
+import com.restaurantes.gerenciamento.usuarios.exception.ClienteNaoEncontradoException;
 import com.restaurantes.gerenciamento.usuarios.model.Clientes;
 import com.restaurantes.gerenciamento.usuarios.model.Endereco;
 import com.restaurantes.gerenciamento.usuarios.model.Usuarios;
@@ -30,13 +32,20 @@ public class ClienteServiceImpl implements ClienteService {
         Usuarios usuario = usuarioService.criarUsuario(dto, endereco);
 
         Clientes cliente = new Clientes();
-        cliente.setNome(usuario.getNome());
-        cliente.setLogin(usuario.getLogin());
-        cliente.setSenha(usuario.getSenha());
-        cliente.setEmail(usuario.getLogin());
-        cliente.setEndereco(endereco);
         cliente.setUsuario(usuario);
-        cliente.setDataUltimaAlteracao(LocalDate.now());
+
+        clienteRepository.save(cliente);
+    }
+
+    @Override
+    public void alterarCliente(AlterarDadosUsuarioDto dto) {
+        Endereco endereco = enderecoService.alterarEndereco(dto.getEndereco());
+        Usuarios usuario = usuarioService.alterarUsuario(dto, endereco);
+
+        Clientes cliente = clienteRepository.findById(dto.getId())
+                        .orElseThrow(() -> new ClienteNaoEncontradoException("Cliente nao encontrado"));
+
+        cliente.setUsuario(usuario);
 
         clienteRepository.save(cliente);
     }

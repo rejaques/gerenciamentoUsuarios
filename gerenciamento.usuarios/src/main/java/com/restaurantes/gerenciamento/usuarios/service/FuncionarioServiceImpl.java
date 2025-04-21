@@ -1,6 +1,9 @@
 package com.restaurantes.gerenciamento.usuarios.service;
 
+import com.restaurantes.gerenciamento.usuarios.dto.AlterarDadosUsuarioDto;
 import com.restaurantes.gerenciamento.usuarios.dto.CadastrarUsuarioDto;
+import com.restaurantes.gerenciamento.usuarios.exception.ClienteNaoEncontradoException;
+import com.restaurantes.gerenciamento.usuarios.model.Clientes;
 import com.restaurantes.gerenciamento.usuarios.model.Endereco;
 import com.restaurantes.gerenciamento.usuarios.model.Funcionarios;
 import com.restaurantes.gerenciamento.usuarios.model.Usuarios;
@@ -29,14 +32,21 @@ public class FuncionarioServiceImpl implements FuncionarioService {
         Usuarios usuario = usuarioService.criarUsuario(dto, endereco);
 
         Funcionarios funcionario = new Funcionarios();
-        funcionario.setNome(usuario.getNome());
-        funcionario.setLogin(usuario.getLogin());
-        funcionario.setSenha(usuario.getSenha());
-        funcionario.setEmail(usuario.getLogin());
-        funcionario.setEndereco(endereco);
         funcionario.setUsuario(usuario);
-        funcionario.setDataUltimaAlteracao(LocalDate.now());
 
         funcionarioRepository.save(funcionario);
+    }
+
+    @Override
+    public void alterarFuncionario(AlterarDadosUsuarioDto dto) {
+        Endereco endereco = enderecoService.alterarEndereco(dto.getEndereco());
+        Usuarios usuario = usuarioService.alterarUsuario(dto, endereco);
+
+        Funcionarios funcionarios = funcionarioRepository.findById(dto.getId())
+                .orElseThrow(() -> new ClienteNaoEncontradoException("Cliente nao encontrado"));
+
+        funcionarios.setUsuario(usuario);
+
+        funcionarioRepository.save(funcionarios);
     }
 }

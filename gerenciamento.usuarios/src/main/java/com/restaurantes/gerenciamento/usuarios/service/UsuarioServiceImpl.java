@@ -1,6 +1,10 @@
 package com.restaurantes.gerenciamento.usuarios.service;
 
+import com.restaurantes.gerenciamento.usuarios.dto.AlterarDadosUsuarioDto;
+import com.restaurantes.gerenciamento.usuarios.dto.AlterarEnderecoDto;
 import com.restaurantes.gerenciamento.usuarios.dto.CadastrarUsuarioDto;
+import com.restaurantes.gerenciamento.usuarios.exception.LoginNaoDisponivelException;
+import com.restaurantes.gerenciamento.usuarios.exception.UsuarioNaoEncontradoException;
 import com.restaurantes.gerenciamento.usuarios.model.Endereco;
 import com.restaurantes.gerenciamento.usuarios.model.Usuarios;
 import com.restaurantes.gerenciamento.usuarios.repository.interfaces.UsuarioRepository;
@@ -21,29 +25,37 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public Usuarios criarUsuario(CadastrarUsuarioDto dto, Endereco endereco) {
 
-        if(dto == null || dto.getLogin() == null || dto.getSenha() == null) {
-            throw new IllegalArgumentException("Dados inválidos para criação de usuário");
-        }
-
         if(usuarioRepository.existsByLogin(dto.getLogin())) {
-            throw new IllegalArgumentException("Login já está em uso");
+            throw new LoginNaoDisponivelException("Login já está em uso");
         }
-
-        validarForcaSenha(dto.getSenha());
 
         Usuarios usuario = new Usuarios();
         usuario.setNome(dto.getNome());
         usuario.setLogin(dto.getLogin());
+        usuario.setEmail(dto.getEmail());
         usuario.setSenha(passwordEncoder.encode(dto.getSenha()));
         usuario.setDataUltimaAlteracao(LocalDate.now());
-        usuario.setEndereco(endereco);
+        usuario.setEndereco(endereco.getId());
 
         return usuarioRepository.save(usuario);
     }
 
-    private void validarForcaSenha(String senha) {
-        if(senha.length() < 8) {
-            throw new IllegalArgumentException("Senha deve ter no mínimo 8 caracteres");
+    @Override
+    public Usuarios alterarUsuario(AlterarDadosUsuarioDto dto, Endereco endereco) {
+
+        Usuarios usuario = usuarioRepository.findById(dto.getIdUsuario())
+                .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuario não encontrado"));
+
+        if (dto.getNome() != null) usuario.setNome(dto.getNome());
+        if (dto.getLogin() != null) usuario.setLogin(dto.getLogin());
+        if (dto.getEmail() != null) usuario.setEmail(dto.getEmail());
+        if (dto.getSenha() != null && !dto.getSenha().isBlank()) {
+            usuario.setSenha(passwordEncoder.encode(dto.getSenha()));
         }
+
+        usuario.setDataUltimaAlteracao(LocalDate.now());
+        usuario.setEndereco(endereco.getId());
+
+        return usuarioRepository.save(usuario);
     }
 }

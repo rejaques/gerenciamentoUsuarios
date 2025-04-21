@@ -1,5 +1,7 @@
 package com.restaurantes.gerenciamento.usuarios.dto;
 
+import com.restaurantes.gerenciamento.usuarios.validations.SenhaForte;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,8 +11,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AlterarDadosUsuarioDto {
 
+    private Long idUsuario;
+
+    private Long id;
+
     private String nome;
+
     private String login;
+
+    @SenhaForte
     private String senha;
-    private EnderecoDto endereco;
+
+    private String email;
+
+    private AlterarEnderecoDto endereco;
 }

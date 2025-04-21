@@ -18,23 +18,7 @@ public class Funcionarios {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
-
-    @Column(unique = true)
-    private String email;
-
-    @Column(unique = true)
-    private String login;
-
-    private String senha;
-
-    private LocalDate dataUltimaAlteracao;
-
-    @ManyToOne
-    @JoinColumn(name = "endereco_id")
-    private Endereco endereco;
-
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "usuario_id", nullable = false)
     private Usuarios usuario;
 }

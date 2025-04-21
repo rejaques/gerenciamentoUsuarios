@@ -1,5 +1,6 @@
 package com.restaurantes.gerenciamento.usuarios.service.interfaces;
 
+import com.restaurantes.gerenciamento.usuarios.dto.AlterarDadosUsuarioDto;
 import com.restaurantes.gerenciamento.usuarios.dto.CadastrarUsuarioDto;
 import org.springframework.stereotype.Service;
 
@@ -7,4 +8,5 @@ import org.springframework.stereotype.Service;
 public interface ClienteService {
 
     void criarCliente(CadastrarUsuarioDto dto);
+    void alterarCliente(AlterarDadosUsuarioDto dto);
 }

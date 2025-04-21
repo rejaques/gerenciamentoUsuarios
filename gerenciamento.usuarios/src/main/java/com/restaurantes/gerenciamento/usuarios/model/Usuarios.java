@@ -30,9 +30,8 @@ public class Usuarios {
 
     private LocalDate dataUltimaAlteracao;
 
-    @ManyToOne
-    @JoinColumn(name = "endereco_id")
-    private Endereco endereco;
+    @Column(name = "endereco_id")
+    private Long endereco;
 
 
 }
