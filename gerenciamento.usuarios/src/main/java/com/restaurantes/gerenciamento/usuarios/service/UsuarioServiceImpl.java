@@ -58,4 +58,16 @@ public class UsuarioServiceImpl implements UsuarioService {
 
         return usuarioRepository.save(usuario);
     }
+
+    public Usuarios buscarUsuarioPorEmail(String email){
+
+        return usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuario não encontrado"));
+    }
+
+    public void atualizarSenha(Usuarios usuario, String novaSenha) {
+        String senhaCriptografada = passwordEncoder.encode(novaSenha);
+        usuario.setSenha(senhaCriptografada);
+        usuarioRepository.save(usuario);
+    }
 }

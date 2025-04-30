@@ -11,5 +11,10 @@ import org.springframework.stereotype.Service;
 public interface UsuarioService {
 
     Usuarios criarUsuario(CadastrarUsuarioDto dto, Endereco endereco);
+
     Usuarios alterarUsuario(AlterarDadosUsuarioDto dto, Endereco endereco);
+
+    Usuarios buscarUsuarioPorEmail(String email);
+
+    void atualizarSenha(Usuarios usuario, String novaSenha);
 }

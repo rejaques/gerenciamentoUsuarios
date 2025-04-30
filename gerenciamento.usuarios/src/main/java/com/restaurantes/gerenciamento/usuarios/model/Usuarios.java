@@ -33,5 +33,4 @@ public class Usuarios {
     @Column(name = "endereco_id")
     private Long endereco;
 
-
 }
