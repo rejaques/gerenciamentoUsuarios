@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/cadastro")
 @RequiredArgsConstructor
+@CrossOrigin("*")
+//Renan@1996RR99x321@
 public class CadastroController {
 
     private final ClienteService clienteService;
