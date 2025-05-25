@@ -13,8 +13,6 @@ public class AlterarDadosUsuarioDto {
 
     private Long idUsuario;
 
-    private Long id;
-
     private String nome;
 
     private String login;

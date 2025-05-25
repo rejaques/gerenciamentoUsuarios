@@ -1,7 +1,6 @@
 package com.restaurantes.gerenciamento.usuarios.service;
 
-import com.restaurantes.gerenciamento.usuarios.dto.AlterarDadosUsuarioDto;
-import com.restaurantes.gerenciamento.usuarios.dto.CadastrarUsuarioDto;
+import com.restaurantes.gerenciamento.usuarios.dto.*;
 import com.restaurantes.gerenciamento.usuarios.exception.ClienteNaoEncontradoException;
 import com.restaurantes.gerenciamento.usuarios.model.Clientes;
 import com.restaurantes.gerenciamento.usuarios.model.Endereco;
@@ -15,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -29,6 +29,7 @@ public class ClienteServiceImpl implements ClienteService {
     public void criarCliente(CadastrarUsuarioDto dto) {
 
         Endereco endereco = enderecoService.salvarEndereco(dto.getEndereco());
+        System.out.println("Endereco ID: " + endereco.getId());
         Usuarios usuario = usuarioService.criarUsuario(dto, endereco);
 
         Clientes cliente = new Clientes();
@@ -38,15 +39,13 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public void alterarCliente(AlterarDadosUsuarioDto dto) {
-        Endereco endereco = enderecoService.alterarEndereco(dto.getEndereco());
-        Usuarios usuario = usuarioService.alterarUsuario(dto, endereco);
+    public String buscarUsuarioExistente(Long usuarioId) {
 
-        Clientes cliente = clienteRepository.findById(dto.getId())
-                        .orElseThrow(() -> new ClienteNaoEncontradoException("Cliente nao encontrado"));
-
-        cliente.setUsuario(usuario);
-
-        clienteRepository.save(cliente);
+        if(clienteRepository.findByUsuario_Id(usuarioId).isPresent())
+            return "Cliente";
+        else
+            return "Funcionario";
     }
+
+
 }

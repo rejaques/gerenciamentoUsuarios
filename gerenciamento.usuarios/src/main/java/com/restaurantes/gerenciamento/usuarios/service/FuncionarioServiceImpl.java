@@ -36,17 +36,4 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 
         funcionarioRepository.save(funcionario);
     }
-
-    @Override
-    public void alterarFuncionario(AlterarDadosUsuarioDto dto) {
-        Endereco endereco = enderecoService.alterarEndereco(dto.getEndereco());
-        Usuarios usuario = usuarioService.alterarUsuario(dto, endereco);
-
-        Funcionarios funcionarios = funcionarioRepository.findById(dto.getId())
-                .orElseThrow(() -> new ClienteNaoEncontradoException("Cliente nao encontrado"));
-
-        funcionarios.setUsuario(usuario);
-
-        funcionarioRepository.save(funcionarios);
-    }
 }

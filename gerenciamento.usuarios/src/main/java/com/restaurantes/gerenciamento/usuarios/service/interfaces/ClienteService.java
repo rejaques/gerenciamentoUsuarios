@@ -8,5 +8,5 @@ import org.springframework.stereotype.Service;
 public interface ClienteService {
 
     void criarCliente(CadastrarUsuarioDto dto);
-    void alterarCliente(AlterarDadosUsuarioDto dto);
+    String buscarUsuarioExistente(Long usuarioId);
 }

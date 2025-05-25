@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/cadastro")
 @RequiredArgsConstructor
-@CrossOrigin("*")
 //Renan@1996RR99x321@
 public class CadastroController {
 
@@ -19,14 +18,14 @@ public class CadastroController {
     private final FuncionarioService funcionarioService;
 
     @PostMapping("/cliente")
-    public ResponseEntity<String> cadastrarCliente(@RequestBody CadastrarUsuarioDto dto) {
+    public ResponseEntity<?> cadastrarCliente(@RequestBody CadastrarUsuarioDto dto) {
         System.out.println("Chamou o endpoint de cliente!");
         clienteService.criarCliente(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body("Cliente cadastrado com sucesso!");
     }
 
     @PostMapping("/funcionario")
-    public ResponseEntity<String> cadastrarFuncionario(@RequestBody CadastrarUsuarioDto dto) {
+    public ResponseEntity<?> cadastrarFuncionario(@RequestBody CadastrarUsuarioDto dto) {
         funcionarioService.criarFuncionario(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body("Funcionário cadastrado com sucesso!");
     }

@@ -8,5 +8,4 @@ import org.springframework.stereotype.Service;
 public interface FuncionarioService {
 
     void criarFuncionario(CadastrarUsuarioDto dto);
-    void alterarFuncionario(AlterarDadosUsuarioDto dto);
 }

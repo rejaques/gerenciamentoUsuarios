@@ -6,8 +6,11 @@ import com.restaurantes.gerenciamento.usuarios.exception.EnderecoNaoEncontrado;
 import com.restaurantes.gerenciamento.usuarios.model.Endereco;
 import com.restaurantes.gerenciamento.usuarios.repository.interfaces.EnderecoRepository;
 import com.restaurantes.gerenciamento.usuarios.service.interfaces.EnderecoService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -16,6 +19,7 @@ public class EnderecoServiceImpl implements EnderecoService {
     private final EnderecoRepository enderecoRepository;
 
     @Override
+    @Transactional
     public Endereco salvarEndereco(EnderecoDto dto) {
         Endereco endereco = new Endereco(null, dto.getRua(), dto.getNumero(), dto.getComplemento(),
                 dto.getBairro(), dto.getCidade(), dto.getEstado(), dto.getCep());
@@ -25,7 +29,7 @@ public class EnderecoServiceImpl implements EnderecoService {
     @Override
     public Endereco alterarEndereco(AlterarEnderecoDto dto) {
 
-        Endereco endereco = enderecoRepository.findById(dto.getId())
+        Endereco endereco = enderecoRepository.findById(dto.getEnderecoId())
                 .orElseThrow(() -> new EnderecoNaoEncontrado("Endereco nao encontrado no banco de dados"));
 
         if (dto.getRua() != null) endereco.setRua(dto.getRua());
@@ -37,5 +41,9 @@ public class EnderecoServiceImpl implements EnderecoService {
         if (dto.getCep() != null) endereco.setCep(dto.getCep());
 
         return enderecoRepository.save(endereco);
+    }
+
+    public Optional<Endereco> buscarEndereco (Long enderecoId){
+        return enderecoRepository.findById(enderecoId);
     }
 }

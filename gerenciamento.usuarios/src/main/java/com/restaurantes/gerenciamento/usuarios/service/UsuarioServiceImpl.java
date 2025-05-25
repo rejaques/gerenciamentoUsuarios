@@ -1,7 +1,6 @@
 package com.restaurantes.gerenciamento.usuarios.service;
 
 import com.restaurantes.gerenciamento.usuarios.dto.AlterarDadosUsuarioDto;
-import com.restaurantes.gerenciamento.usuarios.dto.AlterarEnderecoDto;
 import com.restaurantes.gerenciamento.usuarios.dto.CadastrarUsuarioDto;
 import com.restaurantes.gerenciamento.usuarios.exception.LoginNaoDisponivelException;
 import com.restaurantes.gerenciamento.usuarios.exception.UsuarioNaoEncontradoException;
@@ -14,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -41,7 +41,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public Usuarios alterarUsuario(AlterarDadosUsuarioDto dto, Endereco endereco) {
+    public void alterarUsuario(AlterarDadosUsuarioDto dto, Endereco endereco) {
 
         Usuarios usuario = usuarioRepository.findById(dto.getIdUsuario())
                 .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuario não encontrado"));
@@ -56,6 +56,22 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuario.setDataUltimaAlteracao(LocalDate.now());
         usuario.setEndereco(endereco.getId());
 
-        return usuarioRepository.save(usuario);
+        usuarioRepository.save(usuario);
     }
+
+    @Override
+    public Optional<Usuarios> buscaUsuarioPeloEmail(String email) {
+
+        return usuarioRepository.findIdByEmail(email);
+    }
+
+    @Override
+    public Usuarios buscaUsuarioPeloId(Long idUsuario) {
+
+        Usuarios usuario = usuarioRepository.findById(idUsuario)
+                .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuario não encontrado"));
+
+        return usuario;
+    }
+
 }

@@ -11,8 +11,7 @@ import lombok.NoArgsConstructor;
 public class AlterarEnderecoDto {
 
     @NotNull(message = "Informe o id")
-    private Long id;
-
+    private Long enderecoId;
     private String rua;
     private String numero;
     private String complemento;
