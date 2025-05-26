@@ -29,7 +29,7 @@ public class ClienteServiceImpl implements ClienteService {
     public void criarCliente(CadastrarUsuarioDto dto) {
 
         Endereco endereco = enderecoService.salvarEndereco(dto.getEndereco());
-        System.out.println("Endereco ID: " + endereco.getId());
+        System.out.println(" +++++++++++++++++++ Endereco ID: " + endereco.getId() + " +++++++++++++++++");
         Usuarios usuario = usuarioService.criarUsuario(dto, endereco);
 
         Clientes cliente = new Clientes();

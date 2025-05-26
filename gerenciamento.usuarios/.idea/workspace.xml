@@ -5,33 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5958e0eb-e70a-42c4-8cf6-777bc7f4671b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/BuscarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/BuscaDadosDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/DadosBuscaCompletosDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/RetornoLoginDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/AlterarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/AlterarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/CadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/CadastroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/AlterarDadosUsuarioDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/AlterarDadosUsuarioDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/AlterarEnderecoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/AlterarEnderecoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ClienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ClienteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/EnderecoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/EnderecoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/ClienteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/ClienteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/EnderecoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/EnderecoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/FuncionarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/FuncionarioServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/UsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/EnderecoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/EnderecoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/FuncionarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/FuncionarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

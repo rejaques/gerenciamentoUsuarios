@@ -6,6 +6,7 @@ import com.restaurantes.gerenciamento.usuarios.exception.LoginNaoDisponivelExcep
 import com.restaurantes.gerenciamento.usuarios.exception.UsuarioNaoEncontradoException;
 import com.restaurantes.gerenciamento.usuarios.model.Endereco;
 import com.restaurantes.gerenciamento.usuarios.model.Usuarios;
+import com.restaurantes.gerenciamento.usuarios.repository.interfaces.EnderecoRepository;
 import com.restaurantes.gerenciamento.usuarios.repository.interfaces.UsuarioRepository;
 import com.restaurantes.gerenciamento.usuarios.service.interfaces.UsuarioService;
 import lombok.RequiredArgsConstructor;
@@ -21,12 +22,17 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
+    private final EnderecoRepository enderecoRepository;
 
     @Override
     public Usuarios criarUsuario(CadastrarUsuarioDto dto, Endereco endereco) {
 
         if(usuarioRepository.existsByLogin(dto.getLogin())) {
             throw new LoginNaoDisponivelException("Login já está em uso");
+        }
+
+        if (endereco == null || endereco.getId() == null || !enderecoRepository.existsById(endereco.getId())) {
+            throw new IllegalArgumentException("Endereço inválido ou não encontrado");
         }
 
         Usuarios usuario = new Usuarios();
