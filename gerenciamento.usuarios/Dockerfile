@@ -1,10 +1,11 @@
-FROM maven:3.8-openjdk-17
+FROM maven:3.8-openjdk-17 AS builder
 LABEL authors="renan"
 
 WORKDIR /app
+#build pra rodar local
 COPY . .
 
-RUN mvn clean install -DskipTests
+RUN mvn clean intall -DskipTests
 
 EXPOSE 8080
 

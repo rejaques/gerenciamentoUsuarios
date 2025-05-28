@@ -6,7 +6,12 @@ import com.restaurantes.gerenciamento.usuarios.model.Usuarios;
 import com.restaurantes.gerenciamento.usuarios.service.interfaces.ClienteService;
 import com.restaurantes.gerenciamento.usuarios.service.interfaces.UsuarioService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -18,21 +23,26 @@ public class LoginController {
 
     private final UsuarioService usuarioService;
     private final ClienteService clienteService;
+    private AuthenticationManager authenticationManager;
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
+        try {
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(
+                            loginRequest.getEmail(),
+                            loginRequest.getSenha()
+                    )
+            );
 
-        Optional<Usuarios> usuario = usuarioService.buscaUsuarioPeloEmail(loginRequest.getEmail());
+            Usuarios usuario = (Usuarios) authentication.getPrincipal();
+            Long usuariosId = usuario.getId();
+            String tipoUsuario = clienteService.buscarUsuarioExistente(usuariosId);
 
-        Long usuariosId;
+            return ResponseEntity.ok(new RetornoLoginDto(tipoUsuario, usuariosId));
 
-        if(usuario.isPresent())
-            usuariosId = usuario.get().getId();
-        else
-            return ResponseEntity.badRequest().body("Usuario não encontrado");
-
-        String tipoUsuario = clienteService.buscarUsuarioExistente(usuariosId);
-
-        return  ResponseEntity.ok(new RetornoLoginDto(tipoUsuario, usuariosId));
+        } catch (AuthenticationException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Email ou senha inválidos");
+        }
     }
 }
