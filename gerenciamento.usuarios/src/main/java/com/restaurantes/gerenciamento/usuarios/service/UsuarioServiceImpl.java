@@ -1,17 +1,20 @@
 package com.restaurantes.gerenciamento.usuarios.service;
 
+import com.restaurantes.gerenciamento.usuarios.controller.CadastroController;
 import com.restaurantes.gerenciamento.usuarios.dto.AlterarDadosUsuarioDto;
 import com.restaurantes.gerenciamento.usuarios.dto.CadastrarUsuarioDto;
-import com.restaurantes.gerenciamento.usuarios.exception.LoginNaoDisponivelException;
-import com.restaurantes.gerenciamento.usuarios.exception.UsuarioNaoEncontradoException;
+import com.restaurantes.gerenciamento.usuarios.exception.*;
 import com.restaurantes.gerenciamento.usuarios.model.Endereco;
 import com.restaurantes.gerenciamento.usuarios.model.Usuarios;
 import com.restaurantes.gerenciamento.usuarios.repository.interfaces.EnderecoRepository;
 import com.restaurantes.gerenciamento.usuarios.repository.interfaces.UsuarioRepository;
 import com.restaurantes.gerenciamento.usuarios.service.interfaces.UsuarioService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.Optional;
@@ -23,8 +26,10 @@ public class UsuarioServiceImpl implements UsuarioService {
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
     private final EnderecoRepository enderecoRepository;
+    private static final Logger log = LoggerFactory.getLogger(UsuarioServiceImpl.class);
 
     @Override
+    @Transactional
     public Usuarios criarUsuario(CadastrarUsuarioDto dto, Endereco endereco) {
 
         if(usuarioRepository.existsByLogin(dto.getLogin())) {
@@ -32,7 +37,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         }
 
         if (endereco == null || endereco.getId() == null || !enderecoRepository.existsById(endereco.getId())) {
-            throw new IllegalArgumentException("Endereço inválido ou não encontrado");
+            throw new IdNulo("Endereço inválido ou não encontrado");
         }
 
         Usuarios usuario = new Usuarios();
@@ -47,7 +52,15 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public void alterarUsuario(AlterarDadosUsuarioDto dto, Endereco endereco) {
+    @Transactional
+    public Usuarios alterarUsuario(AlterarDadosUsuarioDto dto, Endereco endereco) {
+
+        log.info("Requisição para alterar usuário com ID: {}", dto.getIdUsuario());
+
+        if (dto.getIdUsuario() == null) {
+            log.warn("ID do usuário não fornecido para alteração.");
+            throw new IdNulo("ID do usuário é obrigatório para alteração.");
+        }
 
         Usuarios usuario = usuarioRepository.findById(dto.getIdUsuario())
                 .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuario não encontrado"));
@@ -62,13 +75,20 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuario.setDataUltimaAlteracao(LocalDate.now());
         usuario.setEndereco(endereco.getId());
 
-        usuarioRepository.save(usuario);
+        return usuarioRepository.save(usuario);
     }
 
     @Override
-    public Optional<Usuarios> buscaUsuarioPeloEmail(String email) {
+    public Usuarios buscaUsuarioPeloEmail(String email) {
 
-        return usuarioRepository.findIdByEmail(email);
+        if (email == null || email.isBlank()) {
+            throw new EmailNuloException("Email não pode ser nulo ou vazio");
+        }
+
+        Usuarios usuario = usuarioRepository.findIdByEmail(email)
+                .orElseThrow(() -> new EmailNaoEncontradoExcepition("Email não encontado"));
+
+        return usuario;
     }
 
     @Override

@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Service
+
 public interface UsuarioService {
 
     Usuarios criarUsuario(CadastrarUsuarioDto dto, Endereco endereco);
-    void alterarUsuario(AlterarDadosUsuarioDto dto, Endereco endereco);
+    Usuarios alterarUsuario(AlterarDadosUsuarioDto dto, Endereco endereco);
 
-    Optional<Usuarios> buscaUsuarioPeloEmail(String email);
+    Usuarios buscaUsuarioPeloEmail(String email);
 
     Usuarios buscaUsuarioPeloId(Long idUsuario);
 

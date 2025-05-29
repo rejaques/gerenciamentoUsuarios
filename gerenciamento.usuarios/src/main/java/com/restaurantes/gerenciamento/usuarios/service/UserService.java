@@ -1,5 +1,6 @@
 package com.restaurantes.gerenciamento.usuarios.service;
 
+import com.restaurantes.gerenciamento.usuarios.exception.EmailNaoEncontradoExcepition;
 import com.restaurantes.gerenciamento.usuarios.model.Usuarios;
 import com.restaurantes.gerenciamento.usuarios.repository.interfaces.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +22,7 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
         Usuarios usuario = usuarioRepository.findByEmail(email)
-                .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado com o e-mail: " + email));
+                .orElseThrow(() -> new EmailNaoEncontradoExcepition("Usuário não encontrado com o e-mail: " + email));
 
         // Crie um objeto UserDetails com as informações do seu usuário
         return new User(usuario.getEmail(), // Nome de usuário (geralmente o e-mail)

@@ -5,6 +5,7 @@ import com.restaurantes.gerenciamento.usuarios.dto.RetornoLoginDto;
 import com.restaurantes.gerenciamento.usuarios.model.Usuarios;
 import com.restaurantes.gerenciamento.usuarios.service.interfaces.ClienteService;
 import com.restaurantes.gerenciamento.usuarios.service.interfaces.UsuarioService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +27,7 @@ public class LoginController {
     private AuthenticationManager authenticationManager;
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
+    public ResponseEntity<?> login(@Valid @RequestBody LoginRequest loginRequest) {
         try {
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(

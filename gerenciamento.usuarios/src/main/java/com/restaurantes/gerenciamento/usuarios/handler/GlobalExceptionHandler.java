@@ -9,8 +9,38 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
+    @ExceptionHandler(CepNuloException.class)
+    public ResponseEntity<String> handleClienteNaoEncontradoException(CepNuloException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
     @ExceptionHandler(ClienteNaoEncontradoException.class)
     public ResponseEntity<String> handleClienteNaoEncontradoException(ClienteNaoEncontradoException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(EmailNaoEncontradoExcepition.class)
+    public ResponseEntity<String> handleClienteNaoEncontradoException(EmailNaoEncontradoExcepition ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(EmailNuloException.class)
+    public ResponseEntity<String> handleClienteNaoEncontradoException(EmailNuloException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(EnderecoNaoEncontrado.class)
+    public ResponseEntity<String> handleClienteNaoEncontradoException(EnderecoNaoEncontrado ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(EnderecoNulo.class)
+    public ResponseEntity<String> handleClienteNaoEncontradoException(EnderecoNulo ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(FalhaAoSalvarException.class)
+    public ResponseEntity<String> handleClienteNaoEncontradoException(FalhaAoSalvarException ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
@@ -19,13 +49,13 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
-    @ExceptionHandler(LoginNaoDisponivelException.class)
-    public ResponseEntity<String> handleLoginNaoDisponivelException(LoginNaoDisponivelException ex) {
+    @ExceptionHandler(IdNulo.class)
+    public ResponseEntity<String> handleFuncionarioNaoEncontradoException(IdNulo ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
-    @ExceptionHandler(EnderecoNaoEncontrado.class)
-    public ResponseEntity<String> handleEnderecoNaoEncontrado(EnderecoNaoEncontrado ex) {
+    @ExceptionHandler(LoginNaoDisponivelException.class)
+    public ResponseEntity<String> handleLoginNaoDisponivelException(LoginNaoDisponivelException ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 

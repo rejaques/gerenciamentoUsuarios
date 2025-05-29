@@ -1,6 +1,7 @@
 package com.restaurantes.gerenciamento.usuarios.dto;
 
 import com.restaurantes.gerenciamento.usuarios.validations.SenhaForte;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +22,7 @@ public class CadastrarUsuarioDto {
     @SenhaForte
     private String senha;
 
-    @NotBlank(message = "Email é obrigatório")
+    @Email
     private String email;
 
     private EnderecoDto endereco;

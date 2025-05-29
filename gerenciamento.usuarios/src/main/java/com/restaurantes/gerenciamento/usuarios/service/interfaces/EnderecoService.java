@@ -7,10 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Service
 public interface EnderecoService {
 
     Endereco salvarEndereco(EnderecoDto dto);
     Endereco alterarEndereco(AlterarEnderecoDto dto);
-    Optional<Endereco> buscarEndereco (Long enderecoId);
+    Endereco buscarEndereco (Long enderecoId);
 }

@@ -1,5 +1,6 @@
 package com.restaurantes.gerenciamento.usuarios.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,5 +19,6 @@ public class AlterarEnderecoDto {
     private String bairro;
     private String cidade;
     private String estado;
+    @NotBlank(message = "CEP não pode ser nulo")
     private String cep;
 }
