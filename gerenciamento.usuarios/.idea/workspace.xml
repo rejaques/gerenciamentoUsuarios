@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5958e0eb-e70a-42c4-8cf6-777bc7f4671b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/ClienteResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/DadosAlteradosDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/FuncionarioResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/exception/CepNuloException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/exception/EmailNaoEncontradoExcepition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/exception/EmailNuloException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/exception/EnderecoNulo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/exception/FalhaAoSalvarException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/exception/IdNulo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/AlterarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/AlterarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/BuscarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/BuscarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/CadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/CadastroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/AlterarDadosUsuarioDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/AlterarDadosUsuarioDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/CadastrarUsuarioDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/CadastrarUsuarioDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/DadosBuscaCompletosDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/dto/DadosBuscaCompletosDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/ClienteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/ClienteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/EnderecoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/EnderecoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/FuncionarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/FuncionarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/UsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/EnderecoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/EnderecoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/FuncionarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/FuncionarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/UsuarioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +63,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.restaurantes.gerenciamento.usuarios.repository" />
       <recent name="com.restaurantes.gerenciamento.usuarios.dto" />
       <recent name="com.restaurantes.gerenciamento.usuarios.service.interfaces" />
       <recent name="com.restaurantes.gerenciamento.usuarios.service" />
       <recent name="com.restaurantes.gerenciamento.usuarios.config" />
-      <recent name="com.restaurantes.gerenciamento.usuarios.repository.interfaces" />
     </key>
   </component>
   <component name="RunManager">
