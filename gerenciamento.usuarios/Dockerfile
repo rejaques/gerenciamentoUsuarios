@@ -5,7 +5,7 @@ WORKDIR /app
 #build pra rodar local
 COPY . .
 
-RUN mvn clean intall -DskipTests
+RUN mvn clean install -DskipTests
 
 EXPOSE 8080
 

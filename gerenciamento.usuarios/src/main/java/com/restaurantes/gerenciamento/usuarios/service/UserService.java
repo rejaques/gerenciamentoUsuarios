@@ -24,9 +24,9 @@ public class UserService implements UserDetailsService {
         Usuarios usuario = usuarioRepository.findByEmail(email)
                 .orElseThrow(() -> new EmailNaoEncontradoExcepition("Usuário não encontrado com o e-mail: " + email));
 
-        // Crie um objeto UserDetails com as informações do seu usuário
-        return new User(usuario.getEmail(), // Nome de usuário (geralmente o e-mail)
-                usuario.getSenha(),        // Senha (deve estar criptografada no banco de dados)
-                Collections.emptyList()); // Authorities/Roles (você pode implementar isso depois)
+
+        return new User(usuario.getEmail(),
+                usuario.getSenha(),
+                Collections.emptyList());
     }
 }

@@ -82,15 +82,21 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public String buscarUsuarioExistente(Long usuarioId) {
+    public UsuarioAutenticadoDto buscarUsuarioExistente(String email) {
 
-        if(usuarioId == null)
+        if(email == null || email.isEmpty())
             throw new UsuarioNaoEncontradoException("Usuário não encontrado");
 
-        if(clienteRepository.findByUsuario_Id(usuarioId).isPresent())
-            return "Cliente";
+        Usuarios usuarioLogado = usuarioService.buscaUsuarioPeloEmail(email);
+
+        String tipoUsuario;
+
+        if(clienteRepository.findByUsuario_Id(usuarioLogado.getId()).isPresent())
+            tipoUsuario = "Cliente";
         else
-            return "Funcionario";
+            tipoUsuario = "Funcionario";
+
+        return new UsuarioAutenticadoDto(usuarioLogado.getId(), tipoUsuario);
     }
 
 

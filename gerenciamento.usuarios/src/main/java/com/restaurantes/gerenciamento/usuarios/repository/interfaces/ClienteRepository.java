@@ -22,4 +22,5 @@ public interface ClienteRepository extends JpaRepository<Clientes, Long> {
     BuscaDadosDto bucarDadosClientes(@Param("clienteId") Long clienteId);
 
     Optional<Clientes> findByUsuario_Id(Long usuarioId);
+
 }
