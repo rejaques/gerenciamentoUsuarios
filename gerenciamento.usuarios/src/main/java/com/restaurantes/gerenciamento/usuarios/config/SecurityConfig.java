@@ -36,7 +36,7 @@ public class SecurityConfig {
                             .allowedOrigins("http://207.211.191.34:3000", "http://localhost:3000", "http://localhost:8080")
                             .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                             .allowedHeaders("*")
-                            .allowCredentials(true); // isso é crucial
+                            .allowCredentials(true);
                 }
             };
         }

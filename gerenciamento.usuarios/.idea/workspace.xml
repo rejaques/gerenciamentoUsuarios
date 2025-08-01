@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5958e0eb-e70a-42c4-8cf6-777bc7f4671b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/ItemCardapioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/RestauranteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/model/ItemCardapio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/model/Restaurantes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ItemCardapioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/RestauranteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/ItemCardapioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/RestauranteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/ItemCardapioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/RestauranteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ItemCardapioRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/service/ItemCardapioServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_05_2025_14_40_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_05_2025_14_40__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/model/Funcionarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/model/Funcionarios.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +41,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Dockerfile" />
-        <option value="Interface" />
         <option value="Exception" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -48,9 +67,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.ApplicationTests.executor": "Run",
+    "JUnit.ItemCardapioRepositoryTest.executor": "Run",
+    "JUnit.ItemCardapioServiceImplTest.executor": "Run",
+    "JUnit.ItemCardapioServiceTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -63,12 +88,89 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.restaurantes.gerenciamento.usuarios.service" />
       <recent name="com.restaurantes.gerenciamento.usuarios.repository" />
       <recent name="com.restaurantes.gerenciamento.usuarios.dto" />
       <recent name="com.restaurantes.gerenciamento.usuarios.service.interfaces" />
-      <recent name="com.restaurantes.gerenciamento.usuarios.service" />
       <recent name="com.restaurantes.gerenciamento.usuarios.config" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.restaurantes.gerenciamento.usuarios.repository.interfaces" />
+      <recent name="com.restaurantes.gerenciamento.usuarios.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ItemCardapioRepositoryTest">
+    <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gerenciamento.usuarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.restaurantes.gerenciamento.usuarios.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios" />
+      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemCardapioRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gerenciamento.usuarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.restaurantes.gerenciamento.usuarios.repository.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios.repository.interfaces" />
+      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.repository.interfaces.ItemCardapioRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemCardapioServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gerenciamento.usuarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.restaurantes.gerenciamento.usuarios.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios.service" />
+      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.service.ItemCardapioServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemCardapioServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gerenciamento.usuarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.restaurantes.gerenciamento.usuarios.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios.service" />
+      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.service.ItemCardapioServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ItemCardapioRepositoryTest" />
+        <item itemvalue="JUnit.ItemCardapioServiceTest" />
+        <item itemvalue="JUnit.ApplicationTests" />
+        <item itemvalue="JUnit.ItemCardapioServiceImplTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

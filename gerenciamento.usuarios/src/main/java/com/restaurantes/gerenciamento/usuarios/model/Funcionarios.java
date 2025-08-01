@@ -21,4 +21,7 @@ public class Funcionarios {
     @OneToOne
     @JoinColumn(name = "usuario_id", nullable = false)
     private Usuarios usuario;
+
+    @Column(name = "dono_id")
+    private Long donoId;
 }
