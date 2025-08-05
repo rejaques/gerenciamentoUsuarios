@@ -5,25 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5958e0eb-e70a-42c4-8cf6-777bc7f4671b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/ItemCardapioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/controller/RestauranteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/model/ItemCardapio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/model/Restaurantes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ItemCardapioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/RestauranteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/ItemCardapioServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/RestauranteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/ItemCardapioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/interfaces/RestauranteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ItemCardapioRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/service/ItemCardapioServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_05_2025_14_40_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_05_2025_14_40__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ClienteRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/EnderecoRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/UsuarioRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/service/ClienteServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/service/EnderecoServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/service/FuncionarioServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/service/RestauranteServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/service/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/service/UsuarioServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/model/Funcionarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/model/Funcionarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/model/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/model/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/ClienteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/restaurantes/gerenciamento/usuarios/service/ClienteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ItemCardapioRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ItemCardapioRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/service/ItemCardapioServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/restaurantes/gerenciamento/usuarios/service/ItemCardapioServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ItemCardapioRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/restaurantes/gerenciamento/usuarios/repository/interfaces/ItemCardapioRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/restaurantes/gerenciamento/usuarios/service/ItemCardapioServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/restaurantes/gerenciamento/usuarios/service/ItemCardapioServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,9 +68,18 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "JUnit.ApplicationTests.executor": "Run",
+    "JUnit.ClienteRepositoryTest (1).executor": "Run",
+    "JUnit.ClienteRepositoryTest.executor": "Run",
+    "JUnit.ClienteServiceImplTest.executor": "Run",
+    "JUnit.EnderecoRepositoryTest.executor": "Run",
+    "JUnit.EnderecoServiceTest.executor": "Run",
+    "JUnit.FuncionarioServiceImplTest.executor": "Run",
     "JUnit.ItemCardapioRepositoryTest.executor": "Run",
     "JUnit.ItemCardapioServiceImplTest.executor": "Run",
     "JUnit.ItemCardapioServiceTest.executor": "Run",
+    "JUnit.RestauranteServiceImplTest.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "JUnit.UsuarioServiceImplTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -79,6 +88,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/renan/gerenciamentoUsuarios/gerenciamento.usuarios/src/test/java",
     "last_opened_file_path": "C:/gerenciamentoUsuarios",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
@@ -97,28 +107,61 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\renan\gerenciamentoUsuarios\gerenciamento.usuarios\src\test\resources" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.restaurantes.gerenciamento.usuarios.repository.interfaces" />
       <recent name="com.restaurantes.gerenciamento.usuarios.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ItemCardapioRepositoryTest">
-    <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UsuarioRepositoryTest">
+    <configuration name="FuncionarioServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gerenciamento.usuarios" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.restaurantes.gerenciamento.usuarios.*" />
+          <option name="PATTERN" value="com.restaurantes.gerenciamento.usuarios.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios" />
-      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.ApplicationTests" />
+      <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios.service" />
+      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.service.FuncionarioServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ItemCardapioRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RestauranteServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gerenciamento.usuarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.restaurantes.gerenciamento.usuarios.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios.service" />
+      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.service.RestauranteServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gerenciamento.usuarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.restaurantes.gerenciamento.usuarios.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios.service" />
+      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.service.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuarioRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gerenciamento.usuarios" />
       <extension name="coverage">
         <pattern>
@@ -127,13 +170,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios.repository.interfaces" />
-      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.repository.interfaces.ItemCardapioRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.repository.interfaces.UsuarioRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ItemCardapioServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsuarioServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gerenciamento.usuarios" />
       <extension name="coverage">
         <pattern>
@@ -142,22 +185,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios.service" />
-      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.service.ItemCardapioServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ItemCardapioServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gerenciamento.usuarios" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.restaurantes.gerenciamento.usuarios.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.restaurantes.gerenciamento.usuarios.service" />
-      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.service.ItemCardapioServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.restaurantes.gerenciamento.usuarios.service.UsuarioServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,10 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ItemCardapioRepositoryTest" />
-        <item itemvalue="JUnit.ItemCardapioServiceTest" />
-        <item itemvalue="JUnit.ApplicationTests" />
-        <item itemvalue="JUnit.ItemCardapioServiceImplTest" />
+        <item itemvalue="JUnit.UsuarioRepositoryTest" />
+        <item itemvalue="JUnit.UsuarioServiceImplTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.RestauranteServiceImplTest" />
+        <item itemvalue="JUnit.FuncionarioServiceImplTest" />
       </list>
     </recent_temporary>
   </component>

@@ -98,6 +98,4 @@ public class ClienteServiceImpl implements ClienteService {
 
         return new UsuarioAutenticadoDto(usuarioLogado.getId(), tipoUsuario);
     }
-
-
 }

@@ -24,7 +24,7 @@ import static org.mockito.Mockito.*;
 class ItemCardapioServiceTest {
 
     @InjectMocks
-    private ItemCardapioService service;
+    private ItemCardapioServiceImpl service;
 
     @Mock
     private ItemCardapioRepository itemRepo;

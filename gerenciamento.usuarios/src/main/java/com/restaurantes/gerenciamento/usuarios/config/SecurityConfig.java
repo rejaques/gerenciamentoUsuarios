@@ -68,8 +68,8 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(new BasicAuthenticationFilter(
-                        authenticationManager(
-                                http.getSharedObject(AuthenticationConfiguration.class))),
+                                authenticationManager(
+                                        http.getSharedObject(AuthenticationConfiguration.class))),
                         BasicAuthenticationFilter.class);
 
         return http.build();
@@ -83,4 +83,3 @@ public class SecurityConfig {
 
 
 }
-
